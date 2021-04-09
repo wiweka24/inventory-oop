@@ -8,7 +8,7 @@ Aplikasi ini memiliki fungsi dasar seperti “add” untuk mencatat barang “ed
 Login menggunakan ussernama "admin" dan password "admin"
 
 ### Catatan
-Pada saat mengundug Source Code, database tidak dapat terhubung langsung dengan program sehingga perlu dihubungkan manual lewat menu Server Explorer dan memilih database inventory mdf yang sudah diberikan pada folder /database 
+Pada saat mengunduh Source Code, database tidak dapat terhubung langsung dengan program sehingga perlu dihubungkan manual lewat menu Server Explorer dan memilih database inventory mdf yang sudah diberikan pada folder /database 
 
 ### Sumber
 Program ini terinsipirasi dari MyCodeSpace – Supermarket Mangaement Sytem <br>
