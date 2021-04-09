@@ -60,8 +60,7 @@ namespace Inventory
         {
             populate();
         }
-
-        private void CatDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void CatDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             CatId.Text = CatDGV.SelectedRows[0].Cells[0].Value.ToString();
             CatName.Text = CatDGV.SelectedRows[0].Cells[1].Value.ToString();
