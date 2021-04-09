@@ -119,14 +119,14 @@ namespace Inventory
             }
         }
 
-        private void prodBtn_Click(object sender, EventArgs e)
+        public void prodBtn_Click(object sender, EventArgs e)
         {
             Product prod = new Product();
             prod.Show();
             this.Hide();
         }
 
-        private void sellBtn_Click(object sender, EventArgs e)
+        public void sellBtn_Click(object sender, EventArgs e)
         {
             Sell prod = new Sell();
             prod.Show();
