@@ -12,7 +12,7 @@ Aplikasi ini memiliki fungsi dasar seperti “add” untuk mencatat barang “ed
 ### Pengunaan Aplikasi
 Untuk mencoba aplikasi hal yang dilakukan :
 1. Pengguna dapat mengunduh file inventoryApp.zip
-2. Meng-ekstrak file inventory.zip
+2. Meng-ekstrak file inventoryApp.zip
 3. Meng-install aplikasi dengan menekan file setup.exe
 4. Login menggunakan ussernama "admin" dan password "admin"
 
