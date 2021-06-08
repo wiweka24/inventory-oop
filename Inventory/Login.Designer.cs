@@ -33,7 +33,6 @@ namespace Inventory
             this.passw = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.uname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -48,7 +47,7 @@ namespace Inventory
             this.passw.ForeColor = System.Drawing.SystemColors.WindowText;
             this.passw.HintForeColor = System.Drawing.Color.Empty;
             this.passw.HintText = "";
-            this.passw.isPassword = false;
+            this.passw.isPassword = true;
             this.passw.LineFocusedColor = System.Drawing.Color.Goldenrod;
             this.passw.LineIdleColor = System.Drawing.Color.Gray;
             this.passw.LineMouseHoverColor = System.Drawing.Color.Goldenrod;
@@ -97,19 +96,6 @@ namespace Inventory
             this.bunifuThinButton21.TabIndex = 5;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Sound Bubble DEMO", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(255, -1);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 34);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "x";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -167,12 +153,10 @@ namespace Inventory
             this.Controls.Add(this.uname);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passw);
             this.ForeColor = System.Drawing.SystemColors.Window;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -185,7 +169,6 @@ namespace Inventory
         private Bunifu.Framework.UI.BunifuMaterialTextbox passw;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox uname;

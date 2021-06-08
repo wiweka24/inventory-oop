@@ -20,11 +20,6 @@ namespace Inventory
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Coding\Inventory\database\inventorydb.mdf;Integrated Security=True;Connect Timeout=30");
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void fillcombo()
         {
             Con.Open();
@@ -36,6 +31,8 @@ namespace Inventory
             dt.Load(rdr);
             CatCb.ValueMember = "CatName";
             CatCb.DataSource = dt;
+            CBcat.ValueMember = "CatName";
+            CBcat.DataSource = dt;
             Con.Close();
         }
 
@@ -43,6 +40,18 @@ namespace Inventory
         {
             Con.Open();
             string query = "select * from ProductTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            prodDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+
+        private void CBcat_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Con.Open();
+            string query = "select * from ProductTbl where ProdCat='" + CBcat.SelectedValue.ToString() + "' ";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
@@ -68,7 +77,6 @@ namespace Inventory
                 MessageBox.Show("Product Successfully Added");
                 Con.Close();
                 populate();
-                //" + prodPrice.Text + ",
             }
             catch (Exception ex)
             {
@@ -90,13 +98,14 @@ namespace Inventory
             try
             {
                 if (prodId.Text == "" || prodName.Text == "" || prodQty.Text == "")
+
                 {
                     MessageBox.Show("Missing Information");
                 }
                 else
                 {
                     Con.Open();
-                    string query = "update ProductTbl set ProdName ='" + prodName.Text + "', ProdQty =" + prodQty.Text + ", ProdCat ='" + CatCb.SelectedValue.ToString() + "' where ProdId =" + prodId.Text + "";
+                    string query = "update ProductTbl set ProdName ='" + prodName.Text + "', ProdQty ='" + prodQty.Text + "', ProdCat ='" + CatCb.SelectedValue.ToString() + "', ProdPrice='" + prodPrice.Text + "' where ProdId ='" + prodId.Text + "'";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Product Succesfully Updated");
@@ -148,6 +157,13 @@ namespace Inventory
         {
             Categories cat = new Categories();
             cat.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
     }

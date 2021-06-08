@@ -14,7 +14,6 @@ namespace Inventory
     public partial class Sell : Form
     {
         private int GrdTotal { get; set; } = 0;
-        private int total { get; set; }
         private int i { get; set; } = 0;
 
 
@@ -69,7 +68,14 @@ namespace Inventory
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            dateLbl.Text = DateTime.Today.ToString() + "/" + DateTime.Today.Year.ToString();
+            timer1.Start();
+            dateLbl.Text = DateTime.Now.ToString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            dateLbl.Text = DateTime.Now.ToString();
+            timer1.Start();
         }
 
         private void sellAdd_Click(object sender, EventArgs e)
@@ -128,6 +134,13 @@ namespace Inventory
         {
             Categories cat = new Categories();
             cat.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
     }

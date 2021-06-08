@@ -17,17 +17,12 @@ namespace Inventory
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             if (uname.Text == "admin" && passw.Text == "admin")
             {
-                Product cat = new Product();
-                cat.Show();
+                Menu menu = new Menu();
+                menu.Show();
                 this.Hide();
             }
             else

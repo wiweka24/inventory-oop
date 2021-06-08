@@ -25,7 +25,6 @@ namespace Inventory
             Application.Exit();
         }
 
-
         private void addBtn_Click(object sender, EventArgs e)
         {
             try
@@ -130,6 +129,13 @@ namespace Inventory
         {
             Sell prod = new Sell();
             prod.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
             this.Hide();
         }
     }

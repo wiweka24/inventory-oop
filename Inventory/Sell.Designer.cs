@@ -29,6 +29,7 @@ namespace Inventory
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,12 +39,15 @@ namespace Inventory
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.prodDGV1 = new Guna.UI.WinForms.GunaDataGridView();
-            this.sellQty = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.sellName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.CatCb = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sellPrice = new System.Windows.Forms.TextBox();
+            this.sellQty = new System.Windows.Forms.TextBox();
+            this.sellName = new System.Windows.Forms.TextBox();
+            this.sellID = new System.Windows.Forms.TextBox();
             this.totalLbl = new System.Windows.Forms.Label();
             this.orderDGV = new Guna.UI.WinForms.GunaDataGridView();
             this.Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,17 +58,17 @@ namespace Inventory
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.sellDGV = new Guna.UI.WinForms.GunaDataGridView();
-            this.sellPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label5 = new System.Windows.Forms.Label();
-            this.sellID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateLbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sellAdd = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateLbl = new System.Windows.Forms.Label();
             this.catBtn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.prodBtn = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.prodDGV1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDGV)).BeginInit();
@@ -81,9 +85,9 @@ namespace Inventory
             this.prodDGV1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.prodDGV1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Futura PT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -91,7 +95,7 @@ namespace Inventory
             this.prodDGV1.ColumnHeadersHeight = 25;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Futura PT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sound Bubble DEMO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -99,12 +103,12 @@ namespace Inventory
             this.prodDGV1.DefaultCellStyle = dataGridViewCellStyle3;
             this.prodDGV1.EnableHeadersVisualStyles = false;
             this.prodDGV1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.prodDGV1.Location = new System.Drawing.Point(35, 330);
+            this.prodDGV1.Location = new System.Drawing.Point(16, 226);
             this.prodDGV1.Name = "prodDGV1";
             this.prodDGV1.RowHeadersVisible = false;
             this.prodDGV1.RowTemplate.Height = 25;
             this.prodDGV1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.prodDGV1.Size = new System.Drawing.Size(274, 296);
+            this.prodDGV1.Size = new System.Drawing.Size(293, 217);
             this.prodDGV1.TabIndex = 22;
             this.prodDGV1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.prodDGV1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -114,123 +118,113 @@ namespace Inventory
             this.prodDGV1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.prodDGV1.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.prodDGV1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.prodDGV1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Gray;
+            this.prodDGV1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.prodDGV1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.prodDGV1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Futura PT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodDGV1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.prodDGV1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodDGV1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.prodDGV1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.prodDGV1.ThemeStyle.HeaderStyle.Height = 25;
             this.prodDGV1.ThemeStyle.ReadOnly = false;
             this.prodDGV1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.prodDGV1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.prodDGV1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Futura PT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodDGV1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Sound Bubble DEMO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prodDGV1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.prodDGV1.ThemeStyle.RowsStyle.Height = 25;
             this.prodDGV1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.prodDGV1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.prodDGV1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDGV1_CellContentClick);
             // 
-            // sellQty
-            // 
-            this.sellQty.BackColor = System.Drawing.Color.White;
-            this.sellQty.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sellQty.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sellQty.ForeColor = System.Drawing.Color.Black;
-            this.sellQty.HintForeColor = System.Drawing.Color.Empty;
-            this.sellQty.HintText = "";
-            this.sellQty.isPassword = false;
-            this.sellQty.LineFocusedColor = System.Drawing.Color.Blue;
-            this.sellQty.LineIdleColor = System.Drawing.Color.Transparent;
-            this.sellQty.LineMouseHoverColor = System.Drawing.Color.BlanchedAlmond;
-            this.sellQty.LineThickness = 3;
-            this.sellQty.Location = new System.Drawing.Point(128, 197);
-            this.sellQty.Margin = new System.Windows.Forms.Padding(4);
-            this.sellQty.Name = "sellQty";
-            this.sellQty.Size = new System.Drawing.Size(181, 25);
-            this.sellQty.TabIndex = 21;
-            this.sellQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // sellName
-            // 
-            this.sellName.BackColor = System.Drawing.Color.White;
-            this.sellName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sellName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sellName.ForeColor = System.Drawing.Color.Black;
-            this.sellName.HintForeColor = System.Drawing.Color.Empty;
-            this.sellName.HintText = "";
-            this.sellName.isPassword = false;
-            this.sellName.LineFocusedColor = System.Drawing.Color.Blue;
-            this.sellName.LineIdleColor = System.Drawing.Color.Transparent;
-            this.sellName.LineMouseHoverColor = System.Drawing.Color.BlanchedAlmond;
-            this.sellName.LineThickness = 3;
-            this.sellName.Location = new System.Drawing.Point(128, 151);
-            this.sellName.Margin = new System.Windows.Forms.Padding(4);
-            this.sellName.Name = "sellName";
-            this.sellName.Size = new System.Drawing.Size(181, 25);
-            this.sellName.TabIndex = 11;
-            this.sellName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Sound Bubble DEMO", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label6.Location = new System.Drawing.Point(31, 151);
+            this.label6.Location = new System.Drawing.Point(12, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 21);
+            this.label6.Size = new System.Drawing.Size(46, 24);
             this.label6.TabIndex = 20;
-            this.label6.Text = "NAME";
+            this.label6.Text = "NAMA";
             // 
             // CatCb
             // 
-            this.CatCb.Font = new System.Drawing.Font("Futura PT Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CatCb.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CatCb.FormattingEnabled = true;
-            this.CatCb.Location = new System.Drawing.Point(35, 293);
+            this.CatCb.Location = new System.Drawing.Point(15, 181);
             this.CatCb.Name = "CatCb";
-            this.CatCb.Size = new System.Drawing.Size(182, 27);
+            this.CatCb.Size = new System.Drawing.Size(182, 28);
             this.CatCb.TabIndex = 10;
             this.CatCb.Text = "Select Category";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel2.Controls.Add(this.sellPrice);
+            this.panel2.Controls.Add(this.sellQty);
+            this.panel2.Controls.Add(this.sellName);
+            this.panel2.Controls.Add(this.sellID);
             this.panel2.Controls.Add(this.totalLbl);
             this.panel2.Controls.Add(this.orderDGV);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.sellDGV);
-            this.panel2.Controls.Add(this.sellPrice);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.prodDGV1);
-            this.panel2.Controls.Add(this.sellQty);
-            this.panel2.Controls.Add(this.sellName);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.CatCb);
-            this.panel2.Controls.Add(this.sellID);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.dateLbl);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.sellAdd);
-            this.panel2.Location = new System.Drawing.Point(1, 40);
+            this.panel2.Location = new System.Drawing.Point(0, 47);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(769, 674);
+            this.panel2.Size = new System.Drawing.Size(708, 460);
             this.panel2.TabIndex = 24;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // sellPrice
+            // 
+            this.sellPrice.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellPrice.Location = new System.Drawing.Point(111, 139);
+            this.sellPrice.Name = "sellPrice";
+            this.sellPrice.Size = new System.Drawing.Size(198, 28);
+            this.sellPrice.TabIndex = 38;
+            // 
+            // sellQty
+            // 
+            this.sellQty.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellQty.Location = new System.Drawing.Point(111, 98);
+            this.sellQty.Name = "sellQty";
+            this.sellQty.Size = new System.Drawing.Size(198, 28);
+            this.sellQty.TabIndex = 37;
+            // 
+            // sellName
+            // 
+            this.sellName.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellName.Location = new System.Drawing.Point(111, 56);
+            this.sellName.Name = "sellName";
+            this.sellName.Size = new System.Drawing.Size(198, 28);
+            this.sellName.TabIndex = 36;
+            // 
+            // sellID
+            // 
+            this.sellID.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellID.Location = new System.Drawing.Point(111, 13);
+            this.sellID.Name = "sellID";
+            this.sellID.Size = new System.Drawing.Size(198, 28);
+            this.sellID.TabIndex = 35;
+            // 
             // totalLbl
             // 
-            this.totalLbl.AutoSize = true;
-            this.totalLbl.BackColor = System.Drawing.Color.Transparent;
-            this.totalLbl.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLbl.BackColor = System.Drawing.Color.White;
+            this.totalLbl.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLbl.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.totalLbl.Location = new System.Drawing.Point(559, 319);
+            this.totalLbl.Location = new System.Drawing.Point(548, 231);
             this.totalLbl.Name = "totalLbl";
-            this.totalLbl.Size = new System.Drawing.Size(30, 21);
+            this.totalLbl.Size = new System.Drawing.Size(144, 28);
             this.totalLbl.TabIndex = 34;
             this.totalLbl.Text = "Rp";
+            this.totalLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // orderDGV
             // 
@@ -242,9 +236,9 @@ namespace Inventory
             this.orderDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.orderDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Futura PT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sound Bubble DEMO", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -258,7 +252,7 @@ namespace Inventory
             this.Total});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Futura PT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sound Bubble DEMO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -266,12 +260,12 @@ namespace Inventory
             this.orderDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.orderDGV.EnableHeadersVisualStyles = false;
             this.orderDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.orderDGV.Location = new System.Drawing.Point(331, 101);
+            this.orderDGV.Location = new System.Drawing.Point(331, 13);
             this.orderDGV.Name = "orderDGV";
             this.orderDGV.RowHeadersVisible = false;
             this.orderDGV.RowTemplate.Height = 25;
             this.orderDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.orderDGV.Size = new System.Drawing.Size(422, 215);
+            this.orderDGV.Size = new System.Drawing.Size(360, 210);
             this.orderDGV.TabIndex = 33;
             this.orderDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.orderDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -281,16 +275,16 @@ namespace Inventory
             this.orderDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.orderDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.orderDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.orderDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Gray;
+            this.orderDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.orderDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.orderDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Futura PT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.orderDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Sound Bubble DEMO", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.orderDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.orderDGV.ThemeStyle.HeaderStyle.Height = 25;
             this.orderDGV.ThemeStyle.ReadOnly = false;
             this.orderDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.orderDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.orderDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Futura PT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Sound Bubble DEMO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.orderDGV.ThemeStyle.RowsStyle.Height = 25;
             this.orderDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -303,17 +297,17 @@ namespace Inventory
             // 
             // PName
             // 
-            this.PName.HeaderText = "Product Name";
+            this.PName.HeaderText = "Produk";
             this.PName.Name = "PName";
             // 
             // Prc
             // 
-            this.Prc.HeaderText = "Price";
+            this.Prc.HeaderText = "Harga";
             this.Prc.Name = "Prc";
             // 
             // Price
             // 
-            this.Price.HeaderText = "Quantity";
+            this.Price.HeaderText = "Banyak";
             this.Price.Name = "Price";
             // 
             // Total
@@ -325,24 +319,24 @@ namespace Inventory
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label8.Location = new System.Drawing.Point(471, 319);
+            this.label8.Location = new System.Drawing.Point(488, 235);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 21);
+            this.label8.Size = new System.Drawing.Size(54, 20);
             this.label8.TabIndex = 32;
-            this.label8.Text = "AMOUNT";
+            this.label8.Text = "Jumlah";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Futura PT Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(223, 289);
+            this.button1.Location = new System.Drawing.Point(233, 181);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 35);
+            this.button1.Size = new System.Drawing.Size(76, 28);
             this.button1.TabIndex = 30;
-            this.button1.Text = "Add";
+            this.button1.Text = "Tambah";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -356,9 +350,9 @@ namespace Inventory
             this.sellDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.sellDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Futura PT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -366,7 +360,7 @@ namespace Inventory
             this.sellDGV.ColumnHeadersHeight = 25;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Futura PT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Sound Bubble DEMO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -374,12 +368,12 @@ namespace Inventory
             this.sellDGV.DefaultCellStyle = dataGridViewCellStyle9;
             this.sellDGV.EnableHeadersVisualStyles = false;
             this.sellDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.sellDGV.Location = new System.Drawing.Point(331, 397);
+            this.sellDGV.Location = new System.Drawing.Point(331, 267);
             this.sellDGV.Name = "sellDGV";
             this.sellDGV.RowHeadersVisible = false;
             this.sellDGV.RowTemplate.Height = 25;
             this.sellDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sellDGV.Size = new System.Drawing.Size(422, 229);
+            this.sellDGV.Size = new System.Drawing.Size(360, 176);
             this.sellDGV.TabIndex = 29;
             this.sellDGV.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.sellDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -389,143 +383,104 @@ namespace Inventory
             this.sellDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.sellDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.sellDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.sellDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Gray;
+            this.sellDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sellDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.sellDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Futura PT Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.sellDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.sellDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.sellDGV.ThemeStyle.HeaderStyle.Height = 25;
             this.sellDGV.ThemeStyle.ReadOnly = false;
             this.sellDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.sellDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.sellDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Futura PT Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Sound Bubble DEMO", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sellDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.sellDGV.ThemeStyle.RowsStyle.Height = 25;
             this.sellDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.sellDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // sellPrice
-            // 
-            this.sellPrice.BackColor = System.Drawing.Color.White;
-            this.sellPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sellPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sellPrice.ForeColor = System.Drawing.Color.Black;
-            this.sellPrice.HintForeColor = System.Drawing.Color.Empty;
-            this.sellPrice.HintText = "";
-            this.sellPrice.isPassword = false;
-            this.sellPrice.LineFocusedColor = System.Drawing.Color.Blue;
-            this.sellPrice.LineIdleColor = System.Drawing.Color.Transparent;
-            this.sellPrice.LineMouseHoverColor = System.Drawing.Color.BlanchedAlmond;
-            this.sellPrice.LineThickness = 3;
-            this.sellPrice.Location = new System.Drawing.Point(128, 240);
-            this.sellPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.sellPrice.Name = "sellPrice";
-            this.sellPrice.Size = new System.Drawing.Size(181, 25);
-            this.sellPrice.TabIndex = 28;
-            this.sellPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Sound Bubble DEMO", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label5.Location = new System.Drawing.Point(31, 240);
+            this.label5.Location = new System.Drawing.Point(12, 139);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 21);
+            this.label5.Size = new System.Drawing.Size(52, 24);
             this.label5.TabIndex = 27;
-            this.label5.Text = "PRICE";
-            // 
-            // sellID
-            // 
-            this.sellID.BackColor = System.Drawing.Color.White;
-            this.sellID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sellID.Font = new System.Drawing.Font("Futura PT Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellID.ForeColor = System.Drawing.Color.Black;
-            this.sellID.HintForeColor = System.Drawing.Color.Empty;
-            this.sellID.HintText = "";
-            this.sellID.isPassword = false;
-            this.sellID.LineFocusedColor = System.Drawing.Color.Blue;
-            this.sellID.LineIdleColor = System.Drawing.Color.Transparent;
-            this.sellID.LineMouseHoverColor = System.Drawing.Color.BlanchedAlmond;
-            this.sellID.LineThickness = 3;
-            this.sellID.Location = new System.Drawing.Point(128, 103);
-            this.sellID.Margin = new System.Windows.Forms.Padding(4);
-            this.sellID.Name = "sellID";
-            this.sellID.Size = new System.Drawing.Size(181, 25);
-            this.sellID.TabIndex = 9;
-            this.sellID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Futura PT Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label7.Location = new System.Drawing.Point(357, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 24);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "SELLING";
-            // 
-            // dateLbl
-            // 
-            this.dateLbl.AutoSize = true;
-            this.dateLbl.BackColor = System.Drawing.Color.Transparent;
-            this.dateLbl.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLbl.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.dateLbl.Location = new System.Drawing.Point(587, 0);
-            this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(45, 21);
-            this.dateLbl.TabIndex = 14;
-            this.dateLbl.Text = "Date";
+            this.label5.Text = "HARGA";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Sound Bubble DEMO", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(31, 103);
+            this.label4.Location = new System.Drawing.Point(11, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 21);
+            this.label4.Size = new System.Drawing.Size(92, 24);
             this.label4.TabIndex = 6;
-            this.label4.Text = "BILL ID";
+            this.label4.Text = "ID PENUALAN";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Sound Bubble DEMO", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label3.Location = new System.Drawing.Point(31, 197);
+            this.label3.Location = new System.Drawing.Point(12, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.Size = new System.Drawing.Size(61, 24);
             this.label3.TabIndex = 5;
-            this.label3.Text = "QUANTITY";
+            this.label3.Text = "BANYAK";
             // 
             // sellAdd
             // 
-            this.sellAdd.Font = new System.Drawing.Font("Futura PT Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellAdd.Location = new System.Drawing.Point(331, 367);
+            this.sellAdd.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellAdd.Location = new System.Drawing.Point(331, 231);
             this.sellAdd.Name = "sellAdd";
-            this.sellAdd.Size = new System.Drawing.Size(57, 24);
+            this.sellAdd.Size = new System.Drawing.Size(70, 28);
             this.sellAdd.TabIndex = 8;
-            this.sellAdd.Text = "Add";
+            this.sellAdd.Text = "Tambah";
             this.sellAdd.UseVisualStyleBackColor = true;
             this.sellAdd.Click += new System.EventHandler(this.sellAdd_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Sound Bubble DEMO", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label7.Location = new System.Drawing.Point(586, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 30);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "PENJUALAN";
+            // 
+            // dateLbl
+            // 
+            this.dateLbl.AutoSize = true;
+            this.dateLbl.BackColor = System.Drawing.Color.Transparent;
+            this.dateLbl.Font = new System.Drawing.Font("Sound Bubble DEMO", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLbl.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dateLbl.Location = new System.Drawing.Point(328, 11);
+            this.dateLbl.Name = "dateLbl";
+            this.dateLbl.Size = new System.Drawing.Size(68, 24);
+            this.dateLbl.TabIndex = 14;
+            this.dateLbl.Text = "TANGGAL";
+            // 
             // catBtn
             // 
-            this.catBtn.AutoSize = true;
-            this.catBtn.BackColor = System.Drawing.Color.Goldenrod;
-            this.catBtn.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catBtn.BackColor = System.Drawing.Color.White;
+            this.catBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.catBtn.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catBtn.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.catBtn.Location = new System.Drawing.Point(11, 10);
+            this.catBtn.Location = new System.Drawing.Point(51, 0);
             this.catBtn.Name = "catBtn";
-            this.catBtn.Size = new System.Drawing.Size(90, 21);
+            this.catBtn.Size = new System.Drawing.Size(90, 45);
             this.catBtn.TabIndex = 25;
-            this.catBtn.Text = "Categories";
+            this.catBtn.Text = "Kategori";
+            this.catBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.catBtn.Click += new System.EventHandler(this.catBtn_Click);
             // 
             // label1
@@ -541,27 +496,49 @@ namespace Inventory
             // 
             // prodBtn
             // 
-            this.prodBtn.AutoSize = true;
-            this.prodBtn.BackColor = System.Drawing.Color.Goldenrod;
-            this.prodBtn.Font = new System.Drawing.Font("Futura PT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodBtn.BackColor = System.Drawing.Color.White;
+            this.prodBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prodBtn.Font = new System.Drawing.Font("Sound Bubble DEMO", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prodBtn.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.prodBtn.Location = new System.Drawing.Point(107, 10);
+            this.prodBtn.Location = new System.Drawing.Point(147, 0);
             this.prodBtn.Name = "prodBtn";
-            this.prodBtn.Size = new System.Drawing.Size(68, 21);
+            this.prodBtn.Size = new System.Drawing.Size(90, 45);
             this.prodBtn.TabIndex = 26;
-            this.prodBtn.Text = "Product";
+            this.prodBtn.Text = "ProduK";
+            this.prodBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.prodBtn.Click += new System.EventHandler(this.prodBtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 45);
+            this.button2.TabIndex = 27;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 714);
+            this.ClientSize = new System.Drawing.Size(704, 501);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.prodBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.catBtn);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dateLbl);
             this.Name = "Sell";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sell";
@@ -578,12 +555,9 @@ namespace Inventory
 
         #endregion
         private Guna.UI.WinForms.GunaDataGridView prodDGV1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sellQty;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sellName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox CatCb;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sellID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label dateLbl;
         private System.Windows.Forms.Label label4;
@@ -591,18 +565,23 @@ namespace Inventory
         private System.Windows.Forms.Button sellAdd;
         private System.Windows.Forms.Label catBtn;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sellPrice;
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaDataGridView orderDGV;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private Guna.UI.WinForms.GunaDataGridView sellDGV;
         private System.Windows.Forms.Label totalLbl;
+        private System.Windows.Forms.Label prodBtn;
+        private System.Windows.Forms.TextBox sellPrice;
+        private System.Windows.Forms.TextBox sellQty;
+        private System.Windows.Forms.TextBox sellName;
+        private System.Windows.Forms.TextBox sellID;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prod;
         private System.Windows.Forms.DataGridViewTextBoxColumn PName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.Label prodBtn;
     }
 }
