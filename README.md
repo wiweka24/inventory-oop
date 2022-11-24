@@ -17,13 +17,13 @@ Aplikasi ini memiliki fungsi dasar seperti “add” untuk mencatat barang “ed
 </div>
   
 ## Konten
-  
+
 * [Preview](#preview)
-* [Data diri](#data-diri)
+* [Data Diri](#data-diri)
 * [Penggunaan Aplikasi](#penggunaan-aplikasi) 
 * [Catatan](#catatan)
-* [Demo Aplikasi][#demo-aplikasi]
-* [Referensi][#referensi] 
+* [Demo Aplikasi](#demo-aplikasi)
+* [Referensi](#referensi)
   
 ## Data Diri
 
