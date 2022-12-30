@@ -39,7 +39,7 @@ Aplikasi ini memiliki fungsi dasar seperti “add” untuk mencatat barang “ed
 
 ## Preview
 
-[App Preview][app-img]
+![App Preview][app-img]
 
 ## Penggunaan Aplikasi
 
